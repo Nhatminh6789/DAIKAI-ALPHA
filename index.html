@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>DAIKAI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap"><link rel="stylesheet" href="style.css"></head><body>
+<button id="pauseB" aria-label="Tạm dừng"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="4" width="5" height="16" rx="1.2"/><rect x="14" y="4" width="5" height="16" rx="1.2"/></svg></button>
+<div id="ct"><b>TIẾP TỤC?</b><small id="ctT"></small><button id="ctY">TIẾP TỤC</button><button id="ctN">VỀ MENU</button></div>
+<div id="pz"><b>TẠM DỪNG</b><button id="pzR">TIẾP TỤC</button><button id="pzS">CHƠI LẠI</button><button id="pzQ">VỀ MENU</button></div>
+<div id="rot"><b>Vui lòng quay màn hình để có trải nghiệm tốt hơn</b></div>
+<div id="load"><b>ĐANG TẢI</b><div id="barw"><div id="bar"></div></div><small id="pct">0%</small></div>
+<div id="tap"><img id="tlogo" src="assets/images/logo.png" alt="DAIKAI"><b>Chạm bất cứ đâu để tiếp tục</b></div>
+<div id="menu"><button id="mute" aria-label="Nhạc">♪</button><button id="gear" aria-label="Chỉnh nút"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button><div id="set"><div class="card"><h2>CÀI ĐẶT</h2>
+<div class="row" id="rowEdit"><span>Nút bấm</span><button class="act" id="stEdit">Tinh chỉnh</button></div>
+<div class="row"><span>Nhạc nền</span><div class="sl" id="slM"><i></i><u></u></div><b class="pc" id="pcM">100%</b></div>
+<div class="row"><span>Hiệu ứng</span><div class="sl" id="slS"><i></i><u></u></div><b class="pc" id="pcS">100%</b></div>
+<div class="row"><span>Hiển thị FPS</span><button class="tg" id="fpsT" aria-label="FPS"></button></div>
+<div class="row"><span>Hiển thị Ping</span><button class="tg" id="pingT" aria-label="Ping"></button></div>
+<div class="row"><span>Điều khiển</span><button class="kb" id="ctlT">Tự động</button></div>
+<div id="kbSec"></div><button class="act done" id="stDone">Xong</button></div></div><img id="mlogo" src="assets/images/logo.png" alt="DAIKAI"><svg id="rune" viewBox="0 0 24 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2V38"/><path d="M12 12L4.5 5M12 12L19.5 5"/><path d="M12 14L19 19.5L12 25"/><path d="M12 25L19 30.5L12 36"/></svg><div id="mr"><div id="sc"></div><button id="play" class="mi sel"><svg class="mk" viewBox="0 0 10 16" aria-hidden="true"><path d="M5 1.2L9 8 5 14.8 1 8z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="miter"/></svg><span>Play</span></button><button id="setB" class="mi"><svg class="mk" viewBox="0 0 10 16" aria-hidden="true"><path d="M5 1.2L9 8 5 14.8 1 8z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="miter"/></svg><span>Setting</span></button><button id="profB" class="mi"><svg class="mk" viewBox="0 0 10 16" aria-hidden="true"><path d="M5 1.2L9 8 5 14.8 1 8z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="miter"/></svg><span>Profile</span></button></div></div>
+<div id="msel"><h2>Chọn chế độ</h2><div id="ml"><button class="mc sel" data-m="camp"><b>Camping</b><small>Chế độ cốt truyện</small></button><button class="mc" data-m="pvp"><b>PVP</b><small>Đấu tay đôi 1vs1</small></button></div><div id="mNote"></div><button id="mBack">‹ Quay lại</button></div>
+<div id="room"><h2 id="rmT">PVP</h2>
+<div id="rmMenu" class="rv"><button class="rb hl" id="rmQuick"><img id="rmQi" class="rkI" alt=""><b>Ghép trận nhanh</b><small>Tự tìm đối thủ cùng rank<br>Tính điểm Elo</small></button><button class="rb" id="rmBot"><b>Đấu Bot</b><small>Luyện tập 1vs1</small></button><button class="rb" id="rmHost"><b>Tạo phòng</b><small>Nhận mã phòng và mời bạn bè</small></button><button class="rb" id="rmJoin"><b>Vào phòng</b><small>Nhập mã phòng của bạn bè</small></button></div>
+<div id="rmHostV" class="rv"><div class="rl">MÃ PHÒNG</div><div id="rmCode">·····</div><button class="rs" id="rmCopy">Sao chép mã</button><div class="rpl"><span>● Bạn (chủ phòng)</span><span id="rmP2">○ Đang tạo phòng…</span></div><button class="rb2" id="rmStart" disabled>Bắt đầu</button></div>
+<div id="rmJoinV" class="rv"><div class="rl">NHẬP MÃ PHÒNG</div><input id="rmInp" maxlength="5" autocapitalize="characters" autocomplete="off" spellcheck="false" placeholder="·····"><button class="rb2" id="rmGo">Vào phòng</button><div class="rpl"><span id="rmJ2"></span></div></div>
+<div id="rmName"></div><div id="rmNote"></div><button id="rmBack">‹ Quay lại</button></div>
+<div id="prof"><h2>Hồ sơ</h2>
+<div id="pfBody"><div id="pfL"><div class="rl">TÊN NGƯỜI CHƠI</div><div id="pfNameRow"><input id="pfName" maxlength="12" spellcheck="false" autocomplete="off"><button class="rs" id="pfSave">Lưu tên</button></div><div id="pfStat"></div></div>
+<div id="pfR"><div class="rl">TRẬN GẦN ĐÂY</div><div id="pfHist"></div></div></div>
+<div id="pfNote"></div><div id="pfBot"><button class="rs" id="pfClear">Xoá lịch sử</button><button id="pfBack">‹ Quay lại</button></div></div>
+<div id="mmWait"><img id="mmIc" alt=""><b>Đang tìm đối thủ…</b><div id="mmInfo"></div><div id="mmTm">0:00</div><button id="mmBot">Đấu Bot trong lúc chờ (không tính Elo)</button><button id="mmX">Hủy</button></div>
+<div id="mpWait"><b>Đang chờ đối thủ chọn nhân vật…</b><button id="mpWaitX">Hủy</button></div>
+<div id="csel"><h2>Chọn nhân vật</h2><div id="cl">
+<button class="cc sel" data-c="0"><div class="pt"><img id="cpH" src="assets/images/portrait_hachi.jpg" alt="Hachi"></div><b>Hachi</b><small>Dame trung bình<br>Tốc bắn trung bình<br>Tốc độ di chuyển chậm<br>Hitbox nhỏ</small></button>
+<button class="cc" data-c="1"><div class="pt"><img class="dk" id="cpS" src="assets/images/portrait_sanyo.jpg" alt="Sanyo"></div><b>Sanyo</b><small>Dame to<br>Tốc đánh chậm<br>Tốc độ di chuyển nhanh<br>Hitbox to</small></button>
+<button class="cc" data-c="2"><div class="pt"><img id="cpJ" src="assets/images/portrait_jin.jpg" alt="Jin"></div><b>Jin</b><small>Dame yếu<br>Tốc bắn nhanh<br>Tốc độ di chuyển trung bình<br>Hitbox trung bình</small></button>
+</div><div id="cb"><button id="cBack">‹ Quay lại</button><button id="cGo">Bắt đầu ›</button></div></div>
+<div id="pvSb"><div class="sbh tR"><span id="sbN1">Player 1</span><b id="sbS1">0</b></div><div class="sbh tB"><span id="sbN2">Player 2</span><b id="sbS2">0</b></div></div>
+<div id="pvRes"><div class="rsp tR" id="rsL"><span class="nm" id="rsN1">Player 1</span><b class="sc" id="rsS1">0</b></div><div class="rsp tB" id="rsR"><span class="nm" id="rsN2">Player 2</span><b class="sc" id="rsS2">0</b></div></div>
+<div id="fps"></div><div id="ping"></div>
+<div id="edbar"><span>Kéo nút / sân bạn / sân địch / nút NÉM để di chuyển · − / + đổi cỡ</span><button id="edMinus" aria-label="Nhỏ lại">−</button><b id="edPct">100%</b><button id="edPlus" aria-label="Phóng to">+</button><button id="edReset">Đặt lại</button><button id="edDone">Xong</button></div>
+<div id="app">
+<div class="zone" id="L"><div id="dpad"><i class="u"></i><i class="d"></i><i class="l"></i><i class="r"></i></div></div>
+<div id="g"><canvas id="c" width="384" height="448"></canvas>
+<canvas id="pvC" width="384" height="448"></canvas><div id="pvThrow"><img class="ic" alt=""><small></small><div class="dots"></div></div><div id="pvRad"></div><div id="ov" style="display:none"><b id="msg"></b></div></div>
+<div class="zone" id="R"><div id="hud">
+<div class="hr hs"><span>SCORE</span><b id="hSc">0</b></div>
+<div class="hr"><span>MANA</span><b id="hMn">100</b></div><div class="hb tk"><i id="hMb" style="width:100%"></i></div>
+<div class="hr" id="hSoR" style="display:none"><span>SOUL</span><b id="hSo">15</b></div><div class="hb so" id="hSoB" style="display:none"><i id="hSoI" style="width:50%"></i></div>
+<div class="hr"><span>POWER</span><b id="hPw">0</b></div><div class="hb p"><i id="hPb"></i></div>
+<div class="hr"><span>SPEED</span><b id="hSp">0</b></div><div class="hb s"><i id="hSb"></i></div>
+</div><div id="btns">
+<div class="b" id="bB" data-k="bomb"><svg viewBox="0 0 24 24" fill="none" stroke="#1a9a1a" stroke-width="1.6"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.5 7L12 17.5 5.7 21l1.5-7L2 9.3l7-.8z"/></svg></div>
+<div class="b" id="bF" data-k="slow"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="6" fill="#f00"/></svg></div>
+<div class="b" id="bS" data-k="shoot"><svg viewBox="0 0 24 24"><path d="M6 17l4-11h8l-3 11z" fill="#c9c3b0"/></svg></div>
+</div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/peerjs@1.5.4/dist/peerjs.min.js" async></script>
+<script src="script.js"></script></body></html>

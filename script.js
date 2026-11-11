@@ -6,7 +6,8 @@
 const PEER_OPTS={};
 // Máy chủ relay (Fly.io). Điền wss://TÊN-APP.fly.dev/ws ; để trống = dùng PeerJS P2P như cũ.
 // Có thể thử nhanh bằng cách mở game kèm ?relay=wss://TÊN-APP.fly.dev/ws (chỉ nhận địa chỉ *.fly.dev)
-const RELAY_URL=(()=>{try{const q=new URLSearchParams(location.search).get('relay');if(q&&/^wss:\/\/[a-z0-9-]+(\.[a-z0-9-]+)*\.fly\.dev\/ws$/i.test(q))return q}catch(e){}return''})();
+   const RELAY_URL='wss://daikai-server-tendo09124567.fly.dev/ws';
+
 const mkPeer=id=>RELAY_URL?new RelayPeer(id||null,RELAY_URL):(id?new Peer(id,PEER_OPTS):new Peer(PEER_OPTS));
 const mkI=b=>{const i=new Image();i.src=b;return i};const CHS=[{k:1.0562,fy:0.4259,im:['assets/images/char_hachi_idle.png','assets/images/char_hachi_right.png','assets/images/char_hachi_left.png'].map(mkI)},{k:1.05,fy:0.4285,im:['assets/images/char_sanyo_idle.png','assets/images/char_sanyo_right.png','assets/images/char_sanyo_left.png'].map(mkI),ov:['assets/images/char_sanyo_ov_idle.png','assets/images/char_sanyo_ov_right.png','assets/images/char_sanyo_ov_left.png'].map(mkI)},{k:1.05,fy:0.4285,im:['assets/images/char_jin_idle.png','assets/images/char_jin_right.png','assets/images/char_jin_left.png'].map(mkI)}];const W=384,H=448,cv=document.getElementById('c'),ctx=cv.getContext('2d');
 const EMJ=new Image();EMJ.src='assets/images/emj.png';
